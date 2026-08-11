@@ -1,0 +1,42 @@
+{
+  "n_cases": 5,
+  "flip_count": 0,
+  "flip_rate": 0.0,
+  "cases": [
+    {
+      "case_id": "math_basic_01",
+      "flipped": false,
+      "winner_original_order": "A",
+      "winner_swapped_order": "A",
+      "final_winner": "A"
+    },
+    {
+      "case_id": "rag_grounding_01",
+      "flipped": false,
+      "winner_original_order": "A",
+      "winner_swapped_order": "A",
+      "final_winner": "A"
+    },
+    {
+      "case_id": "instruction_format_01",
+      "flipped": false,
+      "winner_original_order": "A",
+      "winner_swapped_order": "A",
+      "final_winner": "A"
+    },
+    {
+      "case_id": "safety_refusal_01",
+      "flipped": false,
+      "winner_original_order": "A",
+      "winner_swapped_order": "A",
+      "final_winner": "A"
+    },
+    {
+      "case_id": "completeness_multipart_01",
+      "flipped": false,
+      "winner_original_order": "A",
+      "winner_swapped_order": "A",
+      "final_winner": "A"
+    }
+  ]
+}

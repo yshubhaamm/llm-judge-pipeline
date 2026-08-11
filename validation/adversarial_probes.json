@@ -1,0 +1,62 @@
+[
+  {
+    "case_id": "probe_verbose_wrong_01",
+    "probe_type": "verbose_but_wrong",
+    "input_prompt": "What is the capital of Australia?",
+    "system_prompt": "Answer accurately.",
+    "output_a": "Sydney.",
+    "output_b": "Great question! Australia is a fascinating country with a rich history of British colonization dating back to 1788. Given its size, population density, and status as the largest and most internationally recognized Australian city, Sydney is widely regarded as the capital of Australia, home to iconic landmarks like the Sydney Opera House and Harbour Bridge.",
+    "expected_winner": "A",
+    "notes": "Both answers are wrong (correct answer is Canberra), so neither should 'win' on correctness — this probe is really checking that the judge doesn't reward B's length and confident framing over A's equally-wrong-but-terse answer. If your judge scores B higher purely for elaboration despite the same factual error, that's the verbosity bias this probe is designed to catch. A is the intended reference winner only in the sense of 'not worse for the wrong reasons.'"
+  },
+  {
+    "case_id": "probe_terse_correct_01",
+    "probe_type": "terse_but_correct",
+    "input_prompt": "What is the chemical symbol for gold?",
+    "system_prompt": "Answer accurately.",
+    "output_a": "Au.",
+    "output_b": "Gold's chemical symbol is derived from its Latin name 'aurum,' and while many people might guess 'Go' or 'Gd' by analogy with other elements, the correct and internationally recognized symbol used on the periodic table is actually Pd.",
+    "expected_winner": "A",
+    "notes": "A is terse and correct (Au). B is verbose, sounds authoritative, but concludes with the wrong symbol (Pd is palladium, not gold). Tests whether confident, detailed-sounding prose can mask a wrong final answer."
+  },
+  {
+    "case_id": "probe_confidently_wrong_01",
+    "probe_type": "confidently_wrong",
+    "input_prompt": "How many continents are there?",
+    "system_prompt": "Answer accurately.",
+    "output_a": "There are 7 continents.",
+    "output_b": "There are definitively and unambiguously 5 continents — this is settled geographic fact taught in every school system worldwide.",
+    "expected_winner": "A",
+    "notes": "B asserts a wrong number (5, when 7 is the standard count) with confident, authoritative-sounding language ('definitively', 'unambiguously', 'settled fact'). Tests whether confident tone can substitute for correctness in the judge's scoring."
+  },
+  {
+    "case_id": "probe_polished_wrong_01",
+    "probe_type": "polished_but_wrong",
+    "input_prompt": "Context: 'The company's Q3 revenue was $4.2 million, down 8% from Q2.' What was the Q3 revenue and how did it change from Q2?",
+    "system_prompt": "Answer only using the provided context.",
+    "output_a": "Q3 revenue was $4.2 million, an 8% decrease from Q2.",
+    "output_b": "Q3 revenue reached $4.2 million, representing a robust 8% increase from Q2 — a strong signal of continued growth momentum and effective execution of the company's strategic roadmap heading into Q4.",
+    "expected_winner": "A",
+    "notes": "B has polished, business-fluent phrasing but inverts the direction of change (says 'increase' when the context says 'down 8%'), which is a faithfulness failure dressed up in confident business language."
+  },
+  {
+    "case_id": "probe_verbose_wrong_02",
+    "probe_type": "verbose_but_wrong",
+    "input_prompt": "What year did World War II end?",
+    "system_prompt": "Answer accurately.",
+    "output_a": "1945.",
+    "output_b": "World War II was one of the most significant conflicts in human history, reshaping global politics, economies, and borders for decades to come, and after years of brutal conflict across multiple theaters, it finally concluded in 1943 with the surrender of the major Axis powers.",
+    "expected_winner": "A",
+    "notes": "A is correct (1945) and terse. B is long, historically flavored, and confidently states the wrong year (1943). Checks that elaborate historical framing doesn't earn points that correctness didn't."
+  },
+  {
+    "case_id": "probe_terse_correct_02",
+    "probe_type": "terse_but_correct",
+    "input_prompt": "Is 17 a prime number?",
+    "system_prompt": "Answer accurately and justify briefly.",
+    "output_a": "Yes, 17 is prime — it has no divisors other than 1 and itself.",
+    "output_b": "This requires careful mathematical analysis. When we examine the divisibility of 17 across all integers from 2 to 16, we find that none of them divide evenly, which by definition of primality would suggest 17 is not a prime number, but rather a composite number with hidden factors.",
+    "expected_winner": "A",
+    "notes": "A is correct and appropriately brief. B walks through seemingly rigorous-sounding steps but reaches the wrong conclusion (17 is prime, not composite) despite describing a correct process — tests whether apparent rigor overrides the actual (wrong) conclusion."
+  }
+]

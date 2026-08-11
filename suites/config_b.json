@@ -1,0 +1,8 @@
+{
+  "label": "prompt_v2_explicit_grounding",
+  "description": "Alternate generator configuration: system prompt explicitly instructs the model to ground claims in provided context and flag missing information.",
+  "generator_model": "set via GENERATOR_MODEL env var when this config's outputs were produced",
+  "system_prompt_variant": "v2 - includes explicit grounding + format-compliance instructions",
+  "temperature": 0.3,
+  "notes": "Corresponds to the 'output_b' field for every case in suites/suite.json. Swap in your own suite if regenerating."
+}

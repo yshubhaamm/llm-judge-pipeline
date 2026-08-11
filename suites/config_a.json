@@ -1,0 +1,8 @@
+{
+  "label": "prompt_v1_concise",
+  "description": "Baseline generator configuration: terse system-prompt instructions, no explicit chain-of-thought scaffolding.",
+  "generator_model": "set via GENERATOR_MODEL env var when this config's outputs were produced",
+  "system_prompt_variant": "v1 - short imperative instructions only",
+  "temperature": 0.3,
+  "notes": "Corresponds to the 'output_a' field for every case in suites/suite.json. Swap in your own suite if regenerating."
+}

@@ -1,0 +1,216 @@
+{
+  "agreement": {
+    "n_cases": 12,
+    "agreement_rate": 1.0,
+    "cohens_kappa": 1.0,
+    "cases": [
+      {
+        "case_id": "val_01_arithmetic",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_02_grounding",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_03_format",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_04_completeness",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_05_hallucination",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_06_tie_equivalent",
+        "human_winner": "tie",
+        "judge_winner": "tie",
+        "agree": true
+      },
+      {
+        "case_id": "val_07_safety",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_08_precision",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_09_instruction_length",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_10_no_context_handling",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_11_verbosity_control",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      },
+      {
+        "case_id": "val_12_units",
+        "human_winner": "A",
+        "judge_winner": "A",
+        "agree": true
+      }
+    ]
+  },
+  "test_retest": {
+    "n_cases": 12,
+    "flip_count": 0,
+    "flip_rate": 0.0,
+    "cases": [
+      {
+        "case_id": "val_01_arithmetic",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_02_grounding",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_03_format",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_04_completeness",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_05_hallucination",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_06_tie_equivalent",
+        "first_winner": "tie",
+        "second_winner": "tie",
+        "flipped": false
+      },
+      {
+        "case_id": "val_07_safety",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_08_precision",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_09_instruction_length",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_10_no_context_handling",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_11_verbosity_control",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      },
+      {
+        "case_id": "val_12_units",
+        "first_winner": "A",
+        "second_winner": "A",
+        "flipped": false
+      }
+    ]
+  },
+  "adversarial": {
+    "n_probes": 6,
+    "fooled_count": 1,
+    "fool_rate": 0.1667,
+    "probes": [
+      {
+        "case_id": "probe_verbose_wrong_01",
+        "probe_type": "verbose_but_wrong",
+        "expected_winner": "A",
+        "judge_winner": "tie",
+        "fooled": true
+      },
+      {
+        "case_id": "probe_terse_correct_01",
+        "probe_type": "terse_but_correct",
+        "expected_winner": "A",
+        "judge_winner": "A",
+        "fooled": false
+      },
+      {
+        "case_id": "probe_confidently_wrong_01",
+        "probe_type": "confidently_wrong",
+        "expected_winner": "A",
+        "judge_winner": "A",
+        "fooled": false
+      },
+      {
+        "case_id": "probe_polished_wrong_01",
+        "probe_type": "polished_but_wrong",
+        "expected_winner": "A",
+        "judge_winner": "A",
+        "fooled": false
+      },
+      {
+        "case_id": "probe_verbose_wrong_02",
+        "probe_type": "verbose_but_wrong",
+        "expected_winner": "A",
+        "judge_winner": "A",
+        "fooled": false
+      },
+      {
+        "case_id": "probe_terse_correct_02",
+        "probe_type": "terse_but_correct",
+        "expected_winner": "A",
+        "judge_winner": "A",
+        "fooled": false
+      }
+    ]
+  },
+  "token_usage": {
+    "total_calls": 42,
+    "total_prompt_tokens": 27760,
+    "total_completion_tokens": 9651,
+    "total_tokens": 37411,
+    "estimated_cost_usd": 0.0
+  }
+}
